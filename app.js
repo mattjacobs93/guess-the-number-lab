@@ -17,9 +17,9 @@ const game = {
     guess = this.getGuess()
     }
   
-      
-      this.render(guess,this.secretNum,this.prevGuesses)
       this.prevGuesses.push(guess)
+      this.render(guess,this.secretNum,this.prevGuesses)
+      
     } while (guess !== this.secretNum)
     return
 
@@ -35,13 +35,13 @@ const game = {
 
   render: function (guess,secretNum,prevGuesses){
       if (guess === secretNum) {
-        let response = `Congrats You guessed the number in ${1+prevGuesses.length} guesses!`
+        let response = `Congrats You guessed the number in ${prevGuesses.length} guesses!`
         alert(response)
         return
       }
       let high = 'high'
       let low = 'low'
-      let response = `Your guess of ${guess} is too ${guess>secretNum? high:low}.  Previous guesses: ${prevGuesses.join(', ')}`
+      let response = `Your guess is too ${guess>secretNum? high:low}.  Previous guesses: ${prevGuesses.join(', ')}`
       alert(response)
   },
   
