@@ -1,10 +1,9 @@
 const game = {
   title: 'Guess the Number!',
-  biggestNum: 5,
+  biggestNum: 100,
   smallestNum: 1,
   secretNum: null,
   play: function() {
-    //console.log(this.smallestNum)
     if (!this.secretNum) {
     this.secretNum = Math.floor(Math.random() * 
       (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
@@ -43,15 +42,14 @@ const game = {
       let high = 'high'
       let low = 'low'
       let response = `Your guess is too ${guess>secretNum? high:low}.  Previous guesses: ${prevGuesses.join(', ')}`
-      //console.log(response)
       alert(response)
   },
   
 }
 
-//console.log(game.smallestNum)
+
 game.play()
-//game.getGuess()
+
 
 
 
