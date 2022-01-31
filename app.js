@@ -41,7 +41,7 @@ const game = {
       }
       let high = 'high'
       let low = 'low'
-      let response = `Your guess is too ${guess>secretNum? high:low}.  Previous guesses: ${prevGuesses.join(', ')}`
+      let response = `Your guess of ${guess} is too ${guess>secretNum? high:low}.  Previous guesses: ${prevGuesses.join(', ')}`
       alert(response)
   },
   
